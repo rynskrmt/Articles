@@ -54,7 +54,7 @@ published: false
 
 全体の処理フローは以下の通りです。
 ```mermaid
-graph LR
+graph TB
     A[User Input - UI] --> B(Gradio Interface);
     B --> C{generate_dialogue 関数呼び出し};
     C -- Prompt --> D[OpenAI Chat Completion API GPT-4o];
