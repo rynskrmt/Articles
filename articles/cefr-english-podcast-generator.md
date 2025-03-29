@@ -1,5 +1,5 @@
 ---
-title: "理想の英語教材を自分で開発してみた - OpenAI TTS API, Python(Gradio)🚀"
+title: "理想の英語学習ツールを自分で開発してみた - OpenAI TTS API, Python(Gradio)🚀"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: []
