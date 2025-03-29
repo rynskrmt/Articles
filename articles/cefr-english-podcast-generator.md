@@ -53,7 +53,7 @@ published: false
 ### システム構成と処理フロー
 
 全体の処理フローは以下の通りです。
-![](/images/cefr-english-podcast-generator/diagram.png)
+![](/images/cefr-english-podcast-generator/diagram2.png)
 
 ### 1. 会話テキスト生成 (`generate_dialogue`)
 
