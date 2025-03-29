@@ -53,7 +53,24 @@ published: false
 ### システム構成と処理フロー
 
 全体の処理フローは以下の通りです。
-![](/images/cefr-english-podcast-generator/diagram2.png)
+```mermaid
+graph LR
+    A[User Input - UI] --> B(Gradio Interface);
+    B --> C{generate_dialogue 関数呼び出し};
+    C -- Prompt --> D[OpenAI Chat Completion API GPT-4o];
+    D -- Dialogue Text --> C;
+    C --> E{text_to_audio 関数呼び出し};
+    E -- Text Segments --> F{get_mp3 関数呼び出し};
+    F -- Text Segment & Voice --> G[OpenAI TTS API tts-1];
+    G -- Audio Bytes --> F;
+    F --> H{音声データ結合};
+    H -- MP3 File Path --> E;
+    C -- Dialogue Text --> I[UI: Text Output];
+    E -- MP3 File Path --> J[UI: Audio Output];
+    D & G -- Usage Info --> K{コスト計算};
+    K -- Estimated Cost --> L[UI: Cost Output];
+    I & J & L --> B;
+```
 
 ### 1. 会話テキスト生成 (`generate_dialogue`)
 
