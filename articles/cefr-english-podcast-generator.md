@@ -10,9 +10,9 @@ published: false
 
 英語学習、特にリスニング力の向上において、自身の興味やレベルに合致した教材を見つけることは重要な要素です。しかし、市販の教材やオンラインサービスでは、特定のトピックや細かなレベル調整に対応しきれないケースが多くありました。
 
-私自身、特定の専門分野に関する議論を、自身の英語レベルに適した難易度で聞きたいと考えていましたが、既存の教材ではなかなか見つけることができませんでした。教材を探す時間に多くの労力を費やし、学習の継続が困難になるという課題に直面していました。
+私自身、特定の専門分野に関する議論を、自身の英語レベルに適した難易度で聞きたいと考えていましたが、既存の教材ではなかなか見つけることができませんでした。
 
-この課題を解決するため、「**自分の興味・レベルに合わせて、無限にリスニング教材を生成できるツール**」の必要性を感じ、自ら開発に至りました。本記事では、その開発経緯、技術的な実装、そして得られた知見について共有します。
+この課題を解決するため、「**自分の興味・レベルに合わせて、リスニング教材を生成できるツール**」の必要性を感じ、開発に至りました。本記事では、その開発経緯、技術的な実装について共有します。
 
 ## 課題設定：理想的な英語リスニング教材の要件
 
@@ -53,26 +53,7 @@ published: false
 ### システム構成と処理フロー
 
 全体の処理フローは以下の通りです。
-
-```mermaid
-graph LR
-    A[ユーザー入力 (UI)] --> B(Gradio Interface);
-    B --> C{1. generate_dialogue 関数呼び出し};
-    C -- Prompt --> D[OpenAI Chat Completion API (GPT-4o)];
-    D -- Dialogue Text --> C;
-    C --> E{2. text_to_audio 関数呼び出し};
-    E -- Text Segments --> F{3. get_mp3 関数 (ループ)};
-    F -- Text Segment & Voice --> G[OpenAI TTS API (tts-1)];
-    G -- Audio Bytes --> F;
-    F --> H{4. 音声データ結合};
-    H -- MP3 File Path --> E;
-    C -- Dialogue Text --> I[UI: Text Output];
-    E -- MP3 File Path --> J[UI: Audio Output];
-    D & G -- Usage Info --> K{5. コスト計算};
-    K -- Estimated Cost --> L[UI: Cost Output];
-    I & J & L --> B;
-```
-*(Mermaid記法などでフロー図を示す)*
+![](/images/cefr-english-podcast-generator/diagram.png)
 
 ### 1. 会話テキスト生成 (`generate_dialogue`)
 
