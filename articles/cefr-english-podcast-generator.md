@@ -1,5 +1,5 @@
 ---
-title: "理想の英語教材を自分で開発してみた🚀 - OpenAI TTS API, Python(Gradio)"
+title: "理想の英語教材を自分で開発してみた - OpenAI TTS API, Python(Gradio)🚀"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: []
@@ -228,6 +228,6 @@ Gradioの`Interface`クラスに必要な関数と入出力コンポーネント
 本稿では、パーソナライズされた英語リスニング教材をオンデマンドで生成するツール「CEFR English Podcast Generator」の開発について紹介しました。OpenAI APIとGradioを活用することで、当初抱えていた「自分に合った教材が見つからない」という課題を効果的に解決できました。
 
 **ソースコードはこちらで公開しています:**
-[https://github.com/rynskrmt/CEFR-English-Podcast-Generator](https://github.com/rynskrmt/CEFR-English-Podcast-Generator)
+https://github.com/rynskrmt/CEFR-English-Podcast-Generator
 
 フィードバックや改善提案など、お気軽にIssueやPull Requestをお寄せください。
