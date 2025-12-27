@@ -37,7 +37,7 @@ https://github.com/leomoon-studios/wiki-go/releases
 
 Webブラウザで `http://localhost:8080` にアクセスすると、Wiki-Goのインターフェースが表示されます。
 
-![Wiki-Go起動後の画面](/images//introduction-wiki-go/wiki-go-default-page.png)  
+![Wiki-Go起動後の画面](https://storage.googleapis.com/zenn-user-upload/87b4627f2fa8-20251227.png)
   
 また、実行したディレクトリに`data`ディレクトリが作成され、そこにWikiのデータが保存されています。
 
