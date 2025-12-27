@@ -3,7 +3,7 @@ title: "DB・余計なランタイム不要のWiki「Wiki-Go」が魅力的だ�
 emoji: "📖"
 type: "tech"
 topics: ["wiki", "Go", "Knowledge"]
-published: false
+published: true
 ---
 
 Node.jsやPythonのようなランタイムを必要としない、**単一バイナリで配布できるナレッジ共有ツール** の例を探していたところ、「**LeoMoon Wiki-Go**」という素晴らしいOSSを知ったので紹介したいと思います。
