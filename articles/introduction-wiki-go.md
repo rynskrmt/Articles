@@ -1,5 +1,5 @@
 ---
-title: "DB不要のWiki「Wiki-Go」が魅力的だったので紹介したい"
+title: "DB・余計なランタイム不要のWiki「Wiki-Go」が魅力的だったので紹介したい"
 emoji: "📖"
 type: "tech"
 topics: ["wiki", "Go", "Knowledge"]
@@ -127,7 +127,7 @@ Wikiのコンテンツ作成に必要な機能は一通り揃っていると考�
 
 ![Wiki-Goのコンテンツ編集後の画面](https://storage.googleapis.com/zenn-user-upload/a3c0859e8e86-20251227.png)
 
-フットノートやMathJax、Mermaid記法などにも対応しているので、通常のWikiコンテンツであれば問題なく作成できるかと思います。 
+フットノートやMathJax、Mermaid記法、動画埋め込みなどにも対応しているので、通常のWikiコンテンツであれば問題なく作成できるかと思います。 
 
 ## まとめ
 
