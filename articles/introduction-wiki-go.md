@@ -83,7 +83,7 @@ data/
     ├── favicon.png               # PNG形式のファビコン（任意）
     └── langs/                    # 起動時にwiki-goによりコピーされる翻訳ファイル
 ```
-[Wiki-GoのGitHubリポジトリ](https://github.com/leomoon-studios/wiki-go)のREADMEより引用（翻訳は私の責務）
+[Wiki-GoのGitHubリポジトリ](https://github.com/leomoon-studios/wiki-go)のREADMEを参照し作成（翻訳は私の責務）
 
 ## 使用感
 
