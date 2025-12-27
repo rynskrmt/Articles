@@ -1,5 +1,5 @@
 ---
-title: "DB・余計なランタイム不要のWiki「Wiki-Go」が魅力的だったので紹介したい"
+title: "DB不要・環境構築不要のWiki「Wiki-Go」を紹介したい"
 emoji: "📖"
 type: "tech"
 topics: ["wiki", "Go", "Knowledge"]
