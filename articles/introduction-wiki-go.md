@@ -6,7 +6,81 @@ topics: ["wiki", "Go", "Knowledge"]
 published: false
 ---
 
-## はじめに
+NodeやPythonのようなランタイムを必要とせず、単一バイナリで配布できるソフトウェアの例を探していたところ、「Wiki-Go」という素晴らしいOSSを見つけたので紹介したいと思います。
+
+## Wiki-Goとは
+Wiki-Goは、Goで実装されたFlat-File（DBがない）Wikiです。
+
+https://github.com/leomoon-studios/wiki-go
+
+記事はMarkdownで管理され、ファイルシステムに保存されます。通常のWikiの機能は備えており、シンプルで使いやすいインターフェースを提供しています。
+その他さまざまな利点がありますが、それらは後ほど説明します。
+
+## 導入・起動方法
+
+Wiki-Goは、Goで実装、バイナリで配布されているため、実行ファイルをダウンロードし実行すればとりあえず手元で動かせます。
+
+### 1. 実行ファイルのダウンロード
+実行ファイルは、「Releases」から手元の環境に合ったものをダウンロードしてください。  
+https://github.com/leomoon-studios/wiki-go/releases
+
+### 2. 起動
+私の手元の環境は M3 MacBookなので、以下のコマンドで起動しました。
+
+```terminal
+./wiki-go-mac-arm64
+```
+
+コマンド実行後、爆速で起動します。  
+
+### 3. 起動後の状態
+
+Webブラウザで `http://localhost:8080` にアクセスすると、Wiki-Goのインターフェースが表示されます。
+
+![Wiki-Go起動後の画面](/images//introduction-wiki-go/wiki-go-default-page.png)  
+  
+また、実行したディレクトリに`data`ディレクトリが作成され、そこにWikiのデータが保存されています。
+
+```yaml
+data/
+├── config.yaml                   # Wiki-Goのメイン設定ファイル
+├── documents/                    # 通常のWikiドキュメント
+│   └── path/
+│       └── to/
+│           └── doc-name/         # 「doc-name」という名前のドキュメント用ディレクトリ
+│               └── document.md   # 「doc-name」の実体となるMarkdownコンテンツ
+│
+├── versions/                     # バージョン履歴の保存先
+│    ├── documents/               # 通常ドキュメントのバージョン履歴
+│    │   └── path/
+│    │       └── to/
+│    │           └── doc-name/    # タイムスタンプ付きのバックアップ
+│    │               └── YYYYMMDDhhmmss.md
+│    └── pages/                   # 特殊ページのバージョン履歴
+│        └── home/                # トップページのタイムスタンプ付きバックアップ
+│            └── YYYYMMDDhhmmss.md
+│
+├── pages/                        # 特殊ページ（システムページ）
+│   └── home/                     # トップページ（ランディングページ）
+│       └── document.md           # トップページのコンテンツ
+│
+├── comments/                     # ドキュメントに対するコメント
+│   └── path/
+│       └── to/
+│           └── doc-name/         # 「doc-name」に対するコメント（タイムスタンプ付き）
+│               └── YYYYMMDDhhmmss_[user].md
+│
+└── static/                       # 静的アセットおよびカスタマイズ用ファイル
+    ├── banner.png                # 全ページ共通のバナー画像（任意・推奨）
+    ├── banner.jpg                # 全ページ共通のバナー画像（任意）
+    ├── favicon.ico               # 標準形式のファビコン（任意）
+    ├── favicon.svg               # SVG形式のファビコン（任意・推奨）
+    ├── favicon.png               # PNG形式のファビコン（任意）
+    └── langs/                    # 起動時にwiki-goによりコピーされる翻訳ファイル
+```
+[Wiki-GoのGitHubリポジトリ](https://github.com/leomoon-studios/wiki-go)のREADMEより引用（翻訳は私の責務）
+
+
 
 
 ## 余談： 単一バイナリで配布できるソフトウェアの可能性に気づいた
