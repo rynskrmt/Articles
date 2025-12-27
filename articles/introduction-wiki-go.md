@@ -1,7 +1,7 @@
 ---
 title: "DBレスのWiki「Wiki-Go」が魅力的だったので紹介したい"
 emoji: "📖"
-type: "tech" # tech: 技術記事 / idea: アイデア
+type: "tech"
 topics: ["wiki", "Go", "Knowledge"]
 published: false
 ---
@@ -32,14 +32,15 @@ https://github.com/leomoon-studios/wiki-go/releases
 ```
 
 コマンド実行後、爆速で起動します。  
+とりあえず動かして動作を確かめるだけなら、これで準備完了です。  
 
-### 3. 起動後の状態
+### 起動後の状態
 
 Webブラウザで `http://localhost:8080` にアクセスすると、Wiki-Goのインターフェースが表示されます。
 
 ![Wiki-Go起動後の画面](https://storage.googleapis.com/zenn-user-upload/87b4627f2fa8-20251227.png)
   
-また、実行したディレクトリに`data`ディレクトリが作成され、そこにWikiのデータが保存されています。
+また、実行ファイルと同じ場所に`data`フォルダが作成され、そこにWikiのデータが保存されています。
 
 ```yaml
 data/
@@ -80,8 +81,49 @@ data/
 ```
 [Wiki-GoのGitHubリポジトリ](https://github.com/leomoon-studios/wiki-go)のREADMEより引用（翻訳は私の責務）
 
+## 使用感
+
+### 管理者ログイン
+画面右上の「login」をクリックすると管理者ログインのダイアログが表示されます。
+デフォルトのUsernameとPasswordはどちらも`admin`です。
+
+ログインすると、記事の追加や編集、Wiki全体の編集などができるようになります。
+
+### Wikiの設定
+画面上部の「Settings」をクリックすると、Wikiの設定ダイアログが表示されます。
+
+![Wiki-Goの設定ダイアログ](https://storage.googleapis.com/zenn-user-upload/23ec63183e97-20251227.png)
+
+セキュリティの設定やWikiコンテンツに関しても細かく設定できます。
+
+個人的に、ユーザインターフェースの言語設定を日本語にできることと、ユーザに対し管理者・編集者などの権限設定が可能なのは嬉しかったです。  
+
+### コンテンツの新規作成
+画面上部の「New（新規）」をクリックすると、新規コンテンツの作成ダイアログが表示されます。
+
+![Wiki-Goの新規コンテンツ作成ダイアログ](https://storage.googleapis.com/zenn-user-upload/d138609d4519-20251227.png)
+
+slug（コンテンツのURLの一部となる文字列）も設定できていいですね。  
+文書パスを指定することで、文書を保管するディレクトリを指定できます。 　
+
+:::message  
+文書パスを日本語で登録しようとすると、ディレクトリ名が空欄（内部的には`---`）で表示されます。  
+:::
+
+タイトルを「最初のドキュメント」、文書パスを「Start」に設定して、保存すると、以下のようなページが追加されます。
+
+![Wiki-Goの新規コンテンツ作成後画面](https://storage.googleapis.com/zenn-user-upload/1753957b1dfb-20251227.png)
+
+### コンテンツの編集
+Markdownで記述することができます。  
+Wikiのコンテンツ作成に必要な機能は一通り揃っていると考えます。 　
+
+![Wiki-Goのコンテンツ編集画面](https://storage.googleapis.com/zenn-user-upload/885d8bcf6041-20251227.png)
 
 
+![Wiki-Goのコンテンツ編集後の画面](https://storage.googleapis.com/zenn-user-upload/a3c0859e8e86-20251227.png)
+
+フットノートやMathJax、Mermaid記法などにも対応しているので、通常のWikiコンテンツであれば問題なく作成できるかと思います。 　
 
 ## 余談： 単一バイナリで配布できるソフトウェアの可能性に気づいた
 
