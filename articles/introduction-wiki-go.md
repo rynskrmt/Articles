@@ -11,6 +11,8 @@ NodeやPythonのようなランタイムを必要とせず、単一バイナリ�
 ## Wiki-Goとは
 Wiki-Goは、Goで実装されたFlat-File（DBがない）Wikiです。
 
+![](https://github.com/leomoon-studios/wiki-go/raw/master/screenshots/preview.png)
+
 https://github.com/leomoon-studios/wiki-go
 
 記事はMarkdownで管理され、ファイルシステムに保存されます。通常のWikiの機能は備えており、シンプルで使いやすいインターフェースを提供しています。
